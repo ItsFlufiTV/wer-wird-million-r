@@ -2,9 +2,8 @@ int currentFrage = 1;
 void fragenUndAntwortenDisplay() {
   background(Background);
   fill(0, 255, 239);
-  textSize(100);
   textAlign(CENTER, CENTER);
-  text(frage, width/2, height/2 - 50);
+  textInBox(frage, width/2, height/2 - 50, 700, 100);
 
   textAlign(CENTER, CENTER);
   textInBox(antworten[0], width/2 - 320, height/2 + 150, 350, 80);
