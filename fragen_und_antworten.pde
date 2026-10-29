@@ -10,12 +10,12 @@ void frage() {
     antworten[3] = "Antwort 4";
     richtigeAntwort = '1';
   }
-  if(currentFrage == 2){
+  if (currentFrage == 2) {
     frage = "Was ist ein boolean";
-    antworten[1] = "richtig Falsch";
-    antworten[2] = "buchstaben";
-    antworten[2] = "a";
-    antworten[3] = "1";
-    richtigeAntwort = '2';
+    antworten[0] = "Richtig oder Falsch";
+    antworten[1] = "Buchstaben";
+    antworten[2] = "Zahlen";
+    antworten[3] = "Character";
+    richtigeAntwort = '1';
   }
 }

@@ -1,19 +1,24 @@
 boolean zeigeFeedback = false;
+int feedbackTimer;
 boolean richtigGeantwortet = false;
+char input;
 void keyPressed() {
-  if(key == richtigeAntwort){
-    check(true);
+  if (!zeigeFeedback) {
+    if (key >= '1' && '4' >= key) {
+      input = key;
+    }
   }
-  else{
-    check(false);
+  if (input == '1') {
   }
-}
-
-void check(boolean Richtig) {
-  if (Richtig) {
-    richtigGeantwortet = true;
-  } else {
-    richtigGeantwortet = false;
+  if (keyCode == ENTER) {
+    if (input != '0') {
+      if (input == richtigeAntwort) {
+        richtigGeantwortet = true;
+      } else {
+        richtigGeantwortet = false;
+      }
+      zeigeFeedback = true;
+      feedbackTimer = millis();
+    }
   }
-     zeigeFeedback = true;
 }

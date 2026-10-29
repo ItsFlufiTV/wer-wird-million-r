@@ -8,10 +8,11 @@ void draw() {
     frage();
     fragenUndAntwortenDisplay();
   } else {
-    antwortScreen();
-    if (key == ' ') {
+    fragenUndAntwortenDisplay();
+    if (millis() - feedbackTimer > 3000) {
       currentFrage ++;
       zeigeFeedback = false;
+      input = '0';
     }
   }
 }
